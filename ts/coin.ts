@@ -1,14 +1,14 @@
-export abstract class Coin{
+export abstract class Coin{ // abstract coin class, coin must have value
 	constructor(public value: number){
 		this.value = value;
 	}
 }
 
-export class Quarter extends Coin{
+export class Quarter extends Coin{ // class extends abstract coin class, constructor use's coin's constructor
 	constructor(){
 		super(.25);
 	}
-		getImageUrl(){
+		getImageUrl(){ // returns png file for quarter 
 		return "img/Quarter.png";
 	}
 }
