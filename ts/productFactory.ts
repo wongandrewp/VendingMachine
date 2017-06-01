@@ -1,6 +1,6 @@
 import * as products from './product'
 
-	export default function GetProduct(): products.Product { // returns random Product
+	export default function GetProduct(): products.Product { // returns random Product, if file imported, this is imported by default
     	let random = Math.floor(Math.random() * 11);
     	switch(random) {
         	case 0: return new products.CocaCola()
