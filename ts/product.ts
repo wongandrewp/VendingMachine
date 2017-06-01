@@ -1,17 +1,17 @@
-import * as Categories from './productCategory'
-
-export interface Product {
+import * as Categories from './productCategory' //import everything as Categories from 'file'
+// rule of thumb: make namespace (Categories) similar to file
+export interface Product { // global interface, classes that implement must have name and price and optional
 	name: string
 	price: number
 	category?: Categories.ProductCategory  //this is optional
 }
 
-export class Initial implements Product{
+export class Initial implements Product{ // initial state, no category, price of 0
 	name = "Please select a product"
 	price = 0
 }
 
-export class CocaCola implements Product{
+export class CocaCola implements Product{ // global template for CocaCola products, priced at 2.30, of category SodaCategory
   name = "Coca-Cola"
   price = 2.30
   category = new Categories.SodaCategory()
