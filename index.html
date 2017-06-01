@@ -46,7 +46,7 @@
         <script src='js/lib/require.js'></script>
 
         <script>
-        require(["js/vendingMachine"], function(machineModule) {
+        require(["js/vendingMachine"], function(machineModule) { //import jsvendingMachine, create machine, apply bindings, set size of machine
             var machine = new machineModule.VendingMachine();
             machine.size = machineModule.VendingMachineSize.medium;
             ko.applyBindings(machine);
