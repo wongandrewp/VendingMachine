@@ -1,14 +1,14 @@
-abstract class ProductCategory {
+abstract class ProductCategory { // abstract template for product category, protected field for imgPath, has name and method for URl
 	protected imgPath = "img/";  
     
 	name: string;
 	abstract getImageUrl(): string;
 }
 
-class SodaCategory extends ProductCategory {
+class SodaCategory extends ProductCategory { // template for sodacategories, has name, implements getImageUrl, imgPath specific to class
 	name = "Soda"
 	getImageUrl () {
-    	return this.imgPath + "SodaCan.png";
+    	return this.imgPath + "SodaCan.png"; // return "img/SodaCan.png" as String
 	}
 }
 
@@ -40,4 +40,4 @@ class CandyBarCategory extends ProductCategory {
 	}
 }
 
-export {ProductCategory, SodaCategory, ChipsCategory, CandyCategory, CandyBarCategory, NutsCategory}
+export {ProductCategory, SodaCategory, ChipsCategory, CandyCategory, CandyBarCategory, NutsCategory} // so others can import
